@@ -21,7 +21,7 @@
     },
     {
       "id": 3,
-      "name": "Kimber Custom 1911",
+      "name": "Kimbert Custom 1911",
       "img": "https://raw.githubusercontent.com/mir-hussain/guns/main/guns/ki%2Cber.png",
       "bullet": "45 ACP",
       "capacity": "7 + 1",
@@ -31,7 +31,7 @@
     },
     {
       "id": 4,
-      "name": "Beretta M9A4 RDO",
+      "name": "Betrettan M9A4 RDO",
       "img": "https://raw.githubusercontent.com/mir-hussain/guns/main/guns/beretta.png",
       "bullet": "9mm",
       "capacity": "18 + 1",
@@ -111,7 +111,7 @@
     },
     {
       "id": 12,
-      "name": "Ruger AR-556 MPR",
+      "name": "Ranger AR-556 MPR",
       "img": "https://raw.githubusercontent.com/mir-hussain/guns/main/guns/RugerAR556RMP.png",
       "bullet": ".223 NATO",
       "capacity": "30 + 1",

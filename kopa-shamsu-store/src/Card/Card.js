@@ -3,14 +3,15 @@ import "./Card.css";
 // import { BsFillCartFill } from "react-icons/bs";
 import {ImCart} from "react-icons/im"
 
+// , handleAddToCart
 const Card = ({gunData, handleAddToCart}) => {
   // console.log(props.gunData);
   // console.log(gunData);
   // const { handleAddToCart } = gunData;
   const { name, img, bullet, action, price, id, capacity, category } = gunData;
 
-  // const handleAddToCart = () => {
-  //   console.log("Parents");
+  // const handleAddToCart = (id) => {
+  //   console.log(id);
   // }
 
   return (

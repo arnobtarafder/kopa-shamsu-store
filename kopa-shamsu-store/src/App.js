@@ -8,18 +8,27 @@ function App() {
   const [guns, setGuns] = useState([]);
   const [cart, setCart] = useState([]);
 
-  const handleAddToCart = (gun) => {
-    // console.log(gun);
-    const newCart = [...cart, gun];
-    // console.log(newCart);
+  // console.log(cart);
+
+  // const handleAddToCart = (gun) => {
+  //   // console.log(gun);
+  //   const newCart = [...cart, gun];
+  //   // console.log(newCart);
+  //   setCart(newCart);
+  // }
+
+   const handleAddToCart = (gun) => {
+     const newCart = [...cart, gun];
+     console.log(newCart);  
     setCart(newCart);
-  }
+      //  console.log(gun);
+   }  
 
 
   // console.log(guns);
   useEffect( () => {
-    fetch('https://raw.githubusercontent.com/mir-hussain/guns/main/data.json')
-    // fetch('guns.json')
+    // fetch('https://raw.githubusercontent.com/mir-hussain/guns/main/data.json')
+    fetch('guns.json')
     .then((response) => response.json())
     .then((data) => setGuns(data))
   }, []);
@@ -28,6 +37,12 @@ function App() {
   return (
       <div>
         <Navbar></Navbar>
+
+        <div>
+          {
+            cart.map(item =>(<h1 key = {item.id}>{item.name}</h1>))
+          }
+        </div>
 
      <div className="card-container">
      {
@@ -40,17 +55,18 @@ function App() {
                     )
         }
      </div>
-     <div>
+     {/* <div>
      {
          cart && cart.map( (item) => (
-            
-                   <h1 key = {item.id}> {item.name} </h1>
-                  
-          )
-                    
-                    )
-        }
-     </div>
+          //  console.log(item);
+           
+           <h1 key = {item.id}> {item.name} </h1>
+           
+           )
+           
+           )
+          }
+     </div> */}
       </div>
   );
 }
