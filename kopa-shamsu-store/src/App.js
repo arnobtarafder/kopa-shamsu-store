@@ -3,10 +3,35 @@ import './App.css';
 import Navbar from './Navbar/Navbar';
 import { useEffect, useState } from 'react';
 import Card from './Card/Card';
+import Modal from 'react-modal';
+
+
+const customStyles = {
+  content: {
+    top: '50%',
+    left: '50%',
+    right: 'auto',
+    bottom: 'auto',
+    marginRight: '-50%',
+    transform: 'translate(-50%, -50%)',
+  },
+};
+
+Modal.setAppElement('#root');
+
 
 function App() {
   const [guns, setGuns] = useState([]);
   const [cart, setCart] = useState([]);
+  const [modalIsOpen, setIsOpen] = useState(false);
+
+  function openModal() {
+    setIsOpen(true);
+  }
+
+  function closeModal() {
+    setIsOpen(false);
+  }
 
   // console.log(cart);
 
@@ -19,7 +44,7 @@ function App() {
 
    const handleAddToCart = (gun) => {
      const newCart = [...cart, gun];
-     console.log(newCart);  
+    //  console.log(newCart);  
     setCart(newCart);
       //  console.log(gun);
    }  
@@ -36,13 +61,15 @@ function App() {
 
   return (
       <div>
-        <Navbar></Navbar>
+        <Navbar cart = {cart} openModal = {openModal}></Navbar>
+        {/* <button onClick={openModal}>Open Modal</button> */}
 
-        <div>
+
+        {/* <div>
           {
             cart.map(item =>(<h1 key = {item.id}>{item.name}</h1>))
           }
-        </div>
+        </div> */}
 
      <div className="card-container">
      {
@@ -54,19 +81,36 @@ function App() {
                     
                     )
         }
+
+      
+
      </div>
      {/* <div>
      {
-         cart && cart.map( (item) => (
-          //  console.log(item);
-           
-           <h1 key = {item.id}> {item.name} </h1>
-           
-           )
-           
-           )
+       cart && cart.map( (item) => (
+         //  console.log(item);
+         
+         <h1 key = {item.id}> {item.name} </h1>
+         
+         )
+         
+         )
+        }
+      </div> */}
+      <Modal
+      isOpen={modalIsOpen}
+      onRequestClose={closeModal}
+      style={customStyles}
+      contentLabel="Example Modal">
+
+       <button onClick={closeModal}>close</button>
+        <div>
+          {
+            cart.map(item =>(<h1 key = {item.id}>{item.name}</h1>))
           }
-     </div> */}
+        </div>
+
+      </Modal>
       </div>
   );
 }
