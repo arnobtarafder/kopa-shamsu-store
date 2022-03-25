@@ -17,7 +17,7 @@ const customStyles = {
     marginRight: '-50%',
     transform: 'translate(-50%, -50%)',
     height: '500px', // <-- This sets the height
-    overlfow: 'scroll' // <-- This tells the modal to scroll
+    // overflow: 'scroll' // <-- This tells the modal to scroll
   }
 };
 
