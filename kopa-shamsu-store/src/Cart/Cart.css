@@ -1,0 +1,33 @@
+/* .cart{
+    background-color: gainsboro;
+} */
+
+.modal-info{
+    display: flex;
+    align-items: center;
+    background-color: #c4c4c4;
+    margin-bottom: 15px;
+    border: 1px solid #c4c4c4;
+    overflow-x: hidden;
+    /* clip-path: polygon(15% 0%, 100% 0, 100% 86%, 85% 100%, 0 100%, 0% 16%); */
+}
+
+.modal-info h3, p{
+    padding-left: 20px;
+}
+.modal-info h3{
+    margin-bottom: 10px;
+}
+
+.modal-image-container {
+    width: 130px;
+    height: 130px;
+    background-color: #fff;
+    padding: 20px;
+    clip-path: polygon(15% 0%, 100% 0, 100% 86%, 85% 100%, 0 100%, 0% 16%);
+  }
+  .modal-image-container img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
