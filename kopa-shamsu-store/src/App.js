@@ -9,14 +9,16 @@ import Cart from './Cart/Cart';
 
 
 const customStyles = {
-  content: {
+  content : {
     top: '50%',
     left: '50%',
     right: 'auto',
     bottom: 'auto',
     marginRight: '-50%',
     transform: 'translate(-50%, -50%)',
-  },
+    height: '500px', // <-- This sets the height
+    overlfow: 'scroll' // <-- This tells the modal to scrol
+  }
 };
 
 Modal.setAppElement('#root');
@@ -74,8 +76,6 @@ function App() {
   return (
       <div>
         <Navbar cart = {cart} openModal = {openModal}></Navbar>
-        {/* <button onClick={openModal}>Open Modal</button> */}
-
 
         {/* <div>
           {
@@ -94,21 +94,8 @@ function App() {
                     )
         }
 
-      
-
      </div>
-     {/* <div>
-     {
-       cart && cart.map( (item) => (
-         //  console.log(item);
-         
-         <h1 key = {item.id}> {item.name} </h1>
-         
-         )
-         
-         )
-        }
-      </div> */}
+    
       <Modal
       isOpen={modalIsOpen}
       onRequestClose={closeModal}
@@ -122,11 +109,12 @@ function App() {
             <p> Cart is empty </p>
           </div>
         )}
-          {cart.length === 4 && (
+          {/* {cart.length === 4 && (
           <div className='cart-warning'>
             <p> You can't buy more than 4 weapons </p>
           </div>
-        )}
+
+        )} */}
 
           {
             // cart.map(item =>(<h1 key = {item.id}>{item.name} {item.price}</h1>))
