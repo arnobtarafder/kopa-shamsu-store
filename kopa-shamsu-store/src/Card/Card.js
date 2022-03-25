@@ -21,7 +21,7 @@ const Card = ({gunData, handleAddToCart}) => {
       </div>
 
       <div className="gun-info">    
-        <h1>{name}</h1>
+        <h2>{name}</h2>
         <p>Bullet Type: {bullet}</p>
         <p>Capacity: {capacity}</p>
         <p>Action: {action}</p>

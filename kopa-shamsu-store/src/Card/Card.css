@@ -52,6 +52,10 @@
     flex-direction: column;
     justify-content: space-between;
   }
+
+  .gun-info h2{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  }
   
   .icon {
     font-size: 1.5rem;
